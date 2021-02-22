@@ -3,14 +3,14 @@
     ## Description:
         This is a application that will generate a Readme based off of question the user will enter!
     
-    ##Table of Contents:
-    -[Description](#description)
-    -[Installation](#installation)
-    -[Usage](#Usage)
-    -[Contributing](#Contributing)
-    -[Credits](#credits)
-    -[License](#License)
-    -[Questions](#Questions)
+    ## Table of Contents:
+    - [Description](#description)
+    - [Installation](#installation)
+    - [Usage](#Usage)
+    - [Contributing](#Contributing)
+    - [Credits](#credits)
+    - [License](#License)
+    - [Questions](#Questions)
 
     ## Installation Guide
         Use the command: npm install
@@ -25,7 +25,7 @@
 
 
     ## Contact Information For Questions
-    -[Click here for my GitHub Profile](https://github.com/dakotapierce26)
-    -For more information, send me an e-mail here: piercedakota26@gmail.com
+    - [Click here for my GitHub Profile](https://github.com/dakotapierce26)
+    - For more information, send me an e-mail here: piercedakota26@gmail.com
 
     
