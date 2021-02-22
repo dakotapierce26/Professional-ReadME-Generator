@@ -30,12 +30,7 @@ inquirer.prompt([
         type: 'input',
         message:'Would you like other developers to contribute to it: ' ,
         name: 'Contributing'
-    },
-    {
-        type: 'input',
-        message:'Write a tests for your application:' ,
-        name: 'Tests'
-    },    
+    },   
     {
         type:'input',
         message: 'List Your Collaborator or any third part assets that require attribution: ',
@@ -87,7 +82,6 @@ inquirer.prompt([
     -[Installation](#installation)
     -[Usage](#Usage)
     -[Contributing](#Contributing)
-    -[Tests](#Tests)
     -[Credits](#credits)
     -[License](#License)
     -[Questions](#Questions)
@@ -98,8 +92,6 @@ inquirer.prompt([
         ${response.Usage}
     ## Contributing Paties/information:
         ${response.Contributing}
-    ## Tests:
-        ${response.Tests}
     ## Credits
         ${response.credits}
     ## License
