@@ -1,9 +1,10 @@
-// TODO: Include packages needed for this application
+//Imports inquirer npm
 const inquirer = require('inquirer');
 const fs = require('fs');
+//Constant that turns the string into a file in the current folder
 const readMeOutput = './readME.md'
 
-// TODO: Create an array of questions for user input
+//Questions used to gather user input
 inquirer.prompt([
     {
         type:'input',
@@ -71,13 +72,47 @@ inquirer.prompt([
         name:'useremail'
     }
     
-])
+]).then((response) => {
+    //response stores all user responses in an object
+    console.log(response);
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+    //Readme file layout when transferred into README.md
+    const content = `
+    # Title: ${response.Title} ![license](https://img.shields.io/badge/License-${response.License}--green.svg "License Badge")
+    ## Description:
+        ${response.description}
+    
+    ##Table of Contents:
+    -[Description](#description)
+    -[Installation](#installation)
+    -[Usage](#Usage)
+    -[Contributing](#Contributing)
+    -[Tests](#Tests)
+    -[Credits](#credits)
+    -[License](#License)
+    -[Questions](#Questions)
 
-// TODO: Create a function to initialize app
-function init() {}
+    ## Installation Guide
+        ${response.installation}
+    ## Usage Instructions:
+        ${response.Usage}
+    ## Contributing Paties/information:
+        ${response.Contributing}
+    ## Tests:
+        ${response.Tests}
+    ## Credits
+        ${response.credits}
+    ## License
+    This project is covered under ${response.License}.
 
-// Function call to initialize app
-init();
+
+    ## Contact Information For Questions
+    -[Click here for my GitHub Profile](https://github.com/${response.username})
+    -For more information, send me an e-mail here: ${response.useremail}
+
+    `
+
+    fs.writeFile(readMeOutput, content, (err) => {
+        err ? console.log(err): console.log('Successfully generated!')
+    });
+})
